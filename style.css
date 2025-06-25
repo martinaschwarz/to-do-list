@@ -1,0 +1,126 @@
+body {
+  font-family: "Inter";
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  background: #fdeb85;
+  border-radius: 20px;
+  padding: 40px;
+
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+  }
+}
+
+h1 {
+  font-family: "Pacifico";
+}
+
+button {
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#new-item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#item-input-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+#input-span {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#item-input {
+  height: 40px;
+  width: -webkit-fill-available;
+  border: none;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+#item-input:focus {
+  outline: none;
+  border: 2px solid orangered;
+}
+
+#add-btn {
+  height: 42px;
+  min-width: fit-content;
+  background: orangered;
+  border: none;
+  color: white;
+  padding: 0 20px;
+}
+
+ul {
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid orangered;
+  padding: 10px 0;
+  cursor: grab;
+  gap: 5px;
+}
+
+.custom-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.native-toggle {
+  display: none;
+}
+
+.custom-toggle {
+  background: none;
+  min-width: 20px;
+  min-height: 20px;
+  border: 2px solid orangered;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.custom-toggle.checked {
+  display: contents;
+}
+
+.custom-toggle.checked::after {
+  background: orangered;
+  width: 20px;
+  height: 20px;
+  border: 2px solid orangered;
+  border-radius: 12px;
+  content: "✔";
+}
+
+.struck {
+  text-decoration: line-through;
+}
+
+.del-btn {
+  border: 2px solid orangered;
+  color: orangered;
+  background: none;
+  padding: 5px 10px;
+}
